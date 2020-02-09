@@ -1372,7 +1372,7 @@ p.interact,
 	height: 30%;
 	z-index: 3;
 	right: 0;
-	background: url(../images/pattern.png) repeat;
+	background: url(../images/logo/pattern.png) repeat;
 	opacity: 0.2;
 }
 .hero-decor-let {
