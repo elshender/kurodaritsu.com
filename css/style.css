@@ -2,8 +2,6 @@
 
 /*======================================
  [ -Main Stylesheet-
-  Theme: Solonick
-  Version: 1.0
   Last change: 10/04/2018 ]
 ++ Fonts ++
 ++ General Style ++
@@ -4907,7 +4905,7 @@ section.parallax-section .section-title:before {
 	width: 100%;
 }
 .client-list-white li a {
-	backgrou nd: #f9f9f9;
+	background: #f9f9f9;
 }
 .client-list-white li a:hover {
 	background: #fff;
