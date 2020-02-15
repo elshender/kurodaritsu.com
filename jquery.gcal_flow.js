@@ -49,16 +49,16 @@
   };
 
   gCalFlow = (function() {
-    gCalFlow.demo_apikey = 'AIzaSyD0vtTUjLXzH4oKCzNRDymL6E3jKBympf0';
+    // gCalFlow.demo_apikey = 'AIzaSyC0XbG_eCEif2jNtIQTtujYW7u4L2lVm3A';
 
     gCalFlow.prototype.target = null;
 
-    gCalFlow.prototype.template = $("<div class=\"gCalFlow\">\n  <div class=\"gcf-header-block\">\n  <h4>Events Calendar</h4>  </div>\n  <div class=\"gcf-item-container-block\">\n    <div class=\"gcf-item-block\">\n      <div class=\"gcf-item-header-block\">\n        <div class=\"gcf-item-date-block\">\n          [<span class=\"gcf-item-daterange\"></span>]\n        </div>\n        <div class=\"gcf-item-title-block\">\n          <strong class=\"gcf-item-title\"></strong>\n        </div>\n      </div>\n      <div class=\"gcf-item-body-block\">\n        <div class=\"gcf-item-description\">\n        </div>\n        <div class=\"gcf-item-location\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"gcf-last-update-block\">\n    LastUpdate: <span class=\"gcf-last-update\"></span>\n  </div>\n</div>");
+    gCalFlow.prototype.template = $("<div class=\"gCalFlow\">\n  <div class=\"gcf-header-block\">\n  <h4 id=\"line1\" class=\"hidden\">\n <span>\n Events Calendar</span>\n </h4>\n <p id=\"cursor-line\" class=\"visible\">\n &gt;&gt; <span class=\"typed-cursor\">\n &#9608;</span>\n </p>\n </div>\n  <div class=\"gcf-item-container-block\">\n    <div class=\"gcf-item-block\">\n      <div class=\"gcf-item-header-block\">\n        <div class=\"gcf-item-date-block\">\n          [<span class=\"gcf-item-daterange\"></span>]\n        </div>\n        <div class=\"gcf-item-title-block\">\n          <strong class=\"gcf-item-title\"></strong>\n        </div>\n      </div>\n      <div class=\"gcf-item-body-block\">\n        <div class=\"gcf-item-description\">\n        </div>\n        <div class=\"gcf-item-location\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"gcf-last-update-block\">\n    LastUpdate: <span class=\"gcf-last-update\"></span>\n  </div>\n</div>");
 
     gCalFlow.prototype.opts = {
       maxitem: 15,
       calid: null,
-      apikey: gCalFlow.demo_apikey,
+      apikey: 'AIzaSyC0XbG_eCEif2jNtIQTtujYW7u4L2lVm3A',
       mode: 'upcoming',
       data_url: null,
       auto_scroll: true,
