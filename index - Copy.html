@@ -21,28 +21,24 @@
         <link type="text/css" rel="stylesheet" href="css/plugins.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link type="text/css" rel="stylesheet" href="css/color.css">
+        <link type="text/css" rel="stylesheet" href="css/text-cursor.css">
         <link rel="shortcut icon" href="images/logo/favicon.ico">
 <!--  Gcal ----------------------- -->
         <link href="jquery.gcal_flow.css" rel="stylesheet" type="text/css">
-        <script>
-          _gCalFlow_debug = true;
-        </script>
-        <script type="text/javascript">
-          var $ = jQuery;
-          $(function() {
-            $('#gcf-design').gCalFlow({
-              calid: 'kuroda.org@gmail.com',
-              maxitem: 4
-            });
-          });
-        </script>
         <style type="text/css">
           h2 { clear: both; margin-top: 1em; }
           #gcf-design .gcf-header-block { background: rgba(0,0,0,0.5); filter: none; }
-          #gcf-design { height: auto; max-width: 420px; margin: auto; background: rgba(0,0,0,0.5); filter: none; overflow: hidden;	position: absolute; z-index: 20; ;
+          #gcf-design { height: auto; max-width: 420px; margin: auto; background: rgba(0,0,0,0.5); filter: none; overflow: hidden;	position: absolute; ;
                 }
-
         </style>
+
+// ES5
+<script>
+  function load() {
+    console.log("load event detected!");
+  }
+  window.onload = load;
+</script>
 <!--  ----------------------- -->
     </head>
     <body>
@@ -85,6 +81,7 @@
                 <div class="tooltip color-bg">Close Menu</div>
             </div>
             <div class="nav-holder">
+                <div class="gcf-title-bloc gc-design"></div>
                 <a class="header-logo" href="index.html"><img src="" alt=""></a> 
                 <div class="nav-title"><span>Menu</span></div>
                 <div class="nav-inner-wrap">
@@ -103,7 +100,6 @@
                     </nav>
                 </div>
             </div>
-            <!-- 2020 -->
             <!--  navigation bar end -->
             <!-- wrapper-->
             <div id="wrapper">
@@ -126,7 +122,8 @@
                         </ul>
                     </nav>
                 </div>
-                <!-- scroll-nav-wrap end-->
+                
+                <!-- scroll-nav-wrap end.somestuff-->
                 <!-- hero-wrap-->
                 <div class="hero-wrap" id="sec1" data-scrollax-parent="true">
                     <!-- hero-inner-->
@@ -382,9 +379,11 @@
         <!-- Main end -->
         <!--=============== scripts  ===============-->
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/typing.js"></script>
         <script type="text/javascript" src="jquery.gcal_flow.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+
         <script>
             _gCalFlow_debug = true;
           </script>
