@@ -1,8 +1,6 @@
 @charset "utf-8";
 
 /*======================================
- [ -Main Stylesheet-
-  Last change: 10/04/2018 ]
 ++ Fonts ++
 ++ General Style ++
 ++ Loader++
@@ -15,7 +13,6 @@
 ++ Blog ++
 ++ 404 ++
 ++ Responsive ++
-++ Gcal ++
 
  
 /*-------------Fonts---------------------------------------*/
@@ -36,7 +33,7 @@ body {
 	height: 100%;
 	text-align: center;
 	background: #2D2D32;
-	color: #fff;
+	color: #000;
 	font-family: 'Titillium Web', sans-serif;
 }
 @-o-viewport {
@@ -78,7 +75,7 @@ body {
 	text-align: left;
 }
 .pin:after {
-	content: "Kuroda : ";
+	content: "Solonick : ";
 	position: absolute;
 	left: -100%;
 	color: rgba(255, 255, 255, 0.51);
@@ -295,7 +292,7 @@ blockquote p {
 	line-height: 80px;
 }
 .logo-holder img {
-	width: 60px;
+	width: 30px;
 	height: auto;
 }
 .nav-button {
@@ -737,19 +734,19 @@ nav.nav-inner {
 }
 .subfooter {
 	background: #2D2D32;
-	height: 0px;
+	height: 80px;
 	z-index: 3;
 	padding: 0 90px;
 }
 .policy-box {
 	color: rgba(255, 255, 255, 0.71);
 	float: left;
-	padding-top: 0px;
+	padding-top: 36px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 8px;
-	letter-spacing: 1px;
+	font-size: 10px;
+	letter-spacing: 2px;
 }
 .to-top {
 	position: absolute;
@@ -926,15 +923,15 @@ p.interact,
 	color: #fff;
 }
 #twitts-container p.tweet {
-	font-size: 9px;
+	font-size: 11px;
 	color: rgba(255, 255, 255, 0.71);
 	float: left;
-	padding: 1px 1px;
+	padding: 10px 18px;
 	background: rgba(255, 255, 255, 0.031);
 	border-radius: 4px;
 	overflow: hidden;
 	font-weight: 400;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	box-shadow: 0px 0px 28px 1px rgba(51, 51, 51, 0.41);
 }
 #twitts-container ul li:hover p.tweet{
@@ -1371,7 +1368,7 @@ p.interact,
 	height: 30%;
 	z-index: 3;
 	right: 0;
-	background: url(../images/logo/pattern.png) repeat;
+	background: url(../images/pattern.png) repeat;
 	opacity: 0.2;
 }
 .hero-decor-let {
@@ -1380,7 +1377,7 @@ p.interact,
 	font-size: 10px;
 	right: 53px;
 	letter-spacing:10px;
-	top: 29%;
+	top: 43%;
 	z-index: 20;
 	font-weight: 500;
 	text-transform:uppercase;
@@ -1951,18 +1948,6 @@ section.parallax-section .section-title:before {
 	opacity: 0.15;
 	text-align: left;
 }
-.section-subtitle1 {
-	position: relative;
-	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
-	font-weight: 900;
-	bottom: 50px;
-	left: 40px;
-	color: #ccc;
-	right: 0;
-	opacity: 0.15;
-	text-align: left;
-}
 .section-subtitle.right-pos {
 	right: 80px;
 	text-align: right;
@@ -2024,7 +2009,6 @@ section.parallax-section .section-title:before {
 	border-right: 1px solid rgba(153, 153, 153, 0.1);
 	height: 100%;
 	position: relative;
-	color: #878C9F;
 }
 .line-item:first-child:before {
 	content: '';
@@ -4716,24 +4700,6 @@ section.parallax-section .section-title:before {
 .team-social li a:hover {
 	color: #999;
 }
-/*------Gcal ------------------------------------------------*/
-.gc-design {
-	
-	
-	position: absolute;
-	bottom: 0;
-	width: 50%;
-	height: 30%;
-	z-index: 3;
-	right: 0;
-	opacity: 0.7;
-	text-transform: uppercase;
-	font-size: 10px;
-}
-.gc-header-block {
-	background: green;
-	filter:none;
-}
 /* ---------Resume  --------------------------------------*/
 .custom-inner-holder {
 	float: left;
@@ -4924,7 +4890,7 @@ section.parallax-section .section-title:before {
 	width: 100%;
 }
 .client-list-white li a {
-	background: #f9f9f9;
+	backgrou nd: #f9f9f9;
 }
 .client-list-white li a:hover {
 	background: #fff;
@@ -6475,18 +6441,13 @@ section.parallax-section .section-title:before {
 		right:0;
 	}	
 }
-@media only screen and (max-width: 500px) {
-	.gc-design{
-			display:none;
-	}
-}
 @media only screen and (max-width: 768px) {
 	section.parallax-section.parallax-sec-half-left .bg,
 	section.parallax-section.parallax-sec-half-left .overlay,
 	section.parallax-section.parallax-sec-half-right .bg,
 	section.parallax-section.parallax-sec-half-right .overlay,
 	section.parallax-section.parallax-sec-half-right:before,
-	section.parallax-section.parallax-sec-half-left:before{
+	section.parallax-section.parallax-sec-half-left:before {
 		width: 70%;
 	}
 	.piechart,
@@ -6699,18 +6660,6 @@ section.parallax-section .section-title:before {
 	}
 	.single-project-title h2 {
 		font-size: 26px;
-	}
-	.playlist-wrap ol li {
-		padding: 20px 0 20px 40px;
-	}
-	.playlist-wrap ol li:before {
-		width: 40px;
-	}
-	.playlist-wrap ol li a.audio-link {
-		padding-right: 30px;
-	}
-	.playlist-wrap ol li a.downbuy-link {
-		right: 20px;
 	}
 	.srv-link-text h4 {
 		margin-bottom: 30px;
