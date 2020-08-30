@@ -494,7 +494,7 @@ function initSolonick() {
     if ($("#twitts-container").length > 0) {
         var config1 = {
             "profile": {
-                "screenName": 'KurodaOrg'
+                "screenName": 'envatomarket'
             },
             "domId": 'twitts-container',
             "maxTweets": 2,
@@ -548,12 +548,10 @@ function initSolonick() {
         //   Video------------------
         var v = $(".background-youtube-wrapper").data("vid");
         var f = $(".background-youtube-wrapper").data("mv");
-		var vlo = $(".background-youtube-wrapper").data("vlo");
         $(".background-youtube-wrapper").YTPlayer({
             fitToBackground: true,
             videoId: v,
             pauseOnScroll: true,
-			loop: vlo,
             mute: f,
             callback: function () {
                 var a = $(".background-youtube-wrapper").data("ytPlayer").player;
@@ -567,7 +565,7 @@ function initSolonick() {
         bvc.append('<iframe src="//player.vimeo.com/video/' + w + '?background=1"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>');
         $(".video-holder").height(bvmc.height());
         if ($(window).width() > 1024) {
-            if ($(".video-holder").size() > 0)
+            if ($(".video-holder").length > 0)
                 if (bvmc.height() / 9 * 16 > bvmc.width()) {
                     bvfc.height(bvmc.height()).width(bvmc.height() / 9 * 16);
                     bvfc.css({
@@ -600,7 +598,7 @@ function initSolonick() {
     videoint();
     // Share   ------------------
     $(".share-container").share({
-        networks: ['facebook', 'pinterest', 'twitter']
+        networks: ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin']
     });
     var shrcn = $(".share-wrapper"),
         ssb = $(".showshare");
@@ -818,78 +816,6 @@ function initparallax() {
         },
         error: function (data) {
             console.log(data);
-        }
-    });
-    //   audio player ------------------
-    if ($(".audio-player-wrap").length > 0) {
-        function initAudiolist() {
-            audiojs.events.ready(function () {
-                var a = audiojs.createAll({
-                        trackEnded: function () {
-                            var next = $('.audio-player-wrap ol li.playing').next();
-                            if (!next.length) next = $('.audio-player-wrap ol li').first();
-                            next.addClass('playing').siblings().removeClass('playing');
-                            audio.load($('a.audio-link', next).attr('data-srcaudio'));
-                            audio.play();
-                        }
-                    }),
-                    audio = a[0],
-                    ids = ['vol-0', 'vol-40', 'vol-70', 'vol-100'];
-                for (var i = 0, ii = ids.length; i < ii; i++) {
-                    var elem = document.getElementById(ids[i]),
-                        volume = ids[i].split('-')[1];
-                    elem.setAttribute('data-volume', volume / 100)
-                    elem.onclick = function (e) {
-                        audio.setVolume(this.getAttribute('data-volume'));
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-                var audio = a[0];
-                first = $('.audio-player-wrap ol a.audio-link').attr('data-srcaudio');
-                $('.audio-player-wrap ul li').first().addClass('playing');
-                audio.load(first);
-                $('.audio-player-wrap ol li a.audio-link').on("click", function (e) {
-                    e.preventDefault();
-                    if ($(this).parent("li").attr('class') === 'playing') {
-                        $(this).parent("li").addClass('pause');
-                        audio.playPause();
-                    } else {
-                        $(this).parent("li").removeClass('pause').addClass('playing').siblings().removeClass('playing').removeClass('pause');
-                        audio.load($(this).attr('data-srcaudio'));
-                        audio.play();
-                    }
-                });
-            });
-        }
-        initAudiolist();
-        $('.volume-control span').on('click', function () {
-            $('.volume-control span').removeClass("allvolumne");
-            var onStar = Number($(this).data('value'));
-            var stars = $(this).parent().children('span');
-            for (i = 0; i < stars.length; i++) {
-                $(stars[i]).removeClass('selected');
-            }
-            for (i = 0; i < onStar; i++) {
-                $(stars[i]).addClass('selected');
-            }
-            if ($(this).data("value") === 1) {
-                $(this).addClass('allvolumne');
-            }
-        });
-        var alblisttitle = $(".playlist-wrap ol").data("listalbumtitle");
-        $(".album-list-title").text("(" + alblisttitle + ")");
-    }
-    var audprev = $("#preview-sound");
-    $('.album-preview').on({
-        mouseenter: function () {
-            var audioprevpath = $(this).data("audiopath");
-            audprev.attr("src", audioprevpath);
-            audprev[0].play();
-        },
-        mouseleave: function () {
-            audprev[0].pause();
-            audprev[0].currentTime = 0;
         }
     });
 //   Init All ------------------
