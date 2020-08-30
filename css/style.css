@@ -292,7 +292,7 @@ blockquote p {
 	line-height: 80px;
 }
 .logo-holder img {
-	width: 30px;
+	width: 60px;
 	height: auto;
 }
 .nav-button {
@@ -734,7 +734,7 @@ nav.nav-inner {
 }
 .subfooter {
 	background: #2D2D32;
-	height: 80px;
+	height: 30px;
 	z-index: 3;
 	padding: 0 90px;
 }
