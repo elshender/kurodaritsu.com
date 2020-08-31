@@ -497,7 +497,7 @@ function initSolonick() {
                 "screenName": 'KurodaOrg'
             },
             "domId": 'twitts-container',
-            "maxTweets": 1,
+            "maxTweets": 2,
             "enableLinks": true,
             "showImages": false
         };

@@ -107,7 +107,7 @@ body {
 /*--------------Typography--------------------------------------*/
 p {
 	font-size: 11px;
-	line-height: 24px;
+	line-height: 10px;
 	padding-bottom: 10px;
 	font-weight: 500;
 	color: #878C9F;
@@ -925,7 +925,7 @@ p.interact,
 #twitts-container p.tweet {
 	font-size: 9px;
 	overflow: scroll;
-	color: rgba(255, 255, 255, 0.71);
+	color: rgba(251, 196, 0, 0.84);
 	float: left;
 	padding: 10px 18px;
 	background: rgba(255, 255, 255, 0.031);
