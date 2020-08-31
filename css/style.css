@@ -925,7 +925,7 @@ p.interact,
 #twitts-container p.tweet {
 	font-size: 10px;
 	overflow: scroll;
-	color: rgba(251, 196, 0, 0.84);
+	color: rgba(223, 227, 255, 0.60);
 	float: left;
 	padding: 1px 1px;
 	background: rgba(255, 255, 255, 0.031);
@@ -978,7 +978,7 @@ p.interact,
 	left: 0;
 	font-weight: 300;
 	opacity: 1;
-	font-size: 14px;
+	font-size: 10px;
 }
 #twitts-container .timePosted a:after {
 	top: -10px;
