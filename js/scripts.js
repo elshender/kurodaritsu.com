@@ -1,5 +1,5 @@
 //   all ------------------
-function initSolonick() {
+function initKuroda() {
     "use strict";
     //   loader ------------------
     $(".pin").text("Loading");
@@ -821,5 +821,5 @@ function initparallax() {
 //   Init All ------------------
 $(function () {
     initparallax();
-    initSolonick();
+    initKuroda();
 });
