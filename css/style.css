@@ -941,7 +941,7 @@ p.interact,
 #twitts-container ul li {
 	float: left;
 	width: 100%;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	position: relative;
 	padding-left: 12px;
 	border-bottom: 1px dotted rgba(255, 255, 255, 0.151);
