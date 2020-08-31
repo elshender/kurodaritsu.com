@@ -923,11 +923,11 @@ p.interact,
 	color: #fff;
 }
 #twitts-container p.tweet {
-	font-size: 9px;
+	font-size: 10px;
 	overflow: scroll;
 	color: rgba(251, 196, 0, 0.84);
 	float: left;
-	padding: 10px 18px;
+	padding: 1px 1px;
 	background: rgba(255, 255, 255, 0.031);
 	border-radius: 4px;
 	overflow: hidden;
@@ -962,10 +962,10 @@ p.interact,
 	color: rgba(255, 255, 255, 0.51);
 	position: relative;
 	float: left;
-	margin-bottom: 10px;
+	margin-bottom: 2px;
 	padding-left: 24px;
 	font-weight: 500;
-	font-size: 11px;
+	font-size: 9px;
 }
 #twitts-container .timePosted a:hover {
 	color: #fff;
