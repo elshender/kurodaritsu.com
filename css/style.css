@@ -6707,6 +6707,131 @@ h3 span {
 		  font-size: 30px;
 		  text-shadow: 2px 3px 0px black;
 	  }
+	   /* ------Team Cards 8 ------------------------------------------------------------ */
+	   .container_card8 {
+		padding-bottom: 30px;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		align-items: center;
+	  }
+	  
+	  .card8 {
+		position: relative;
+		width: 20em;
+		background-size: auto;
+		background-color: #292929;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		 box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.2);
+	  }
+	  .card8:hover {
+		box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
+	  }
+	  
+	  .item81 {
+		background-size: 31em;
+		background-image: url(https://i.imgur.com/ie6SAw6.png);
+	  }
+	  .item82 {
+		background-size: 30em;
+		background-image:
+			  url(https://media.giphy.com/media/hU8zl0Je75fvOeq2rS/giphy.gif);
+	  }
+	  .item82:hover {
+		  background-image: url("");
+	  }
+	  
+	  .item81:hover {
+		  background-image: url("");
+	  }
+	  .card__link8 {
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+	  }
+	  
+	  .card__icon8 {
+		position: absolute;
+		width: 8em;
+		height: 8em;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		  animation: impulse 2s ease alternate infinite;
+	  }
+	  .card8:hover .card__icon8 {
+		opacity: 0;
+		-webkit-transform: scale(0);
+				transform: scale(0);
+	  }
+	  
+	  .card__media8 {
+		padding: 2em 0;
+	  }
+	  .card__media8 svg path {
+		opacity: 0;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+	  }
+	  .card8:hover .card__media svg path {
+		-webkit-animation: fadeInScale .3s ease-in-out forwards;
+				animation: fadeInScale .3s ease-in-out forwards;
+	  }
+	  .card8:hover .card__media svg path:nth-child(2) {
+		-webkit-animation-delay: .1s;
+				animation-delay: .1s;
+	  }
+	  .card8:hover .card__media svg path:nth-child(3) {
+		-webkit-animation-delay: .2s;
+				animation-delay: .2s;
+	  }
+	  
+	  .card__header {
+		position: relative;
+	  }
+	  
+	  .card__header-title {
+		margin: 0 0 .25em;
+		color: white;
+	  }
+	  
+	  .card__header-meta {
+		margin: 0;
+		color: #999;
+	  }
+	  
+	  .card__header-icon {
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -1em;
+		-webkit-transform: translateX(-20%);
+				transform: translateX(-20%);
+		width: 2em;
+		height: 2em;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	  }
+	  .card8:hover .card__header-icon {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+				transform: translateX(0);
+	  }
+	  h3 {
+		color: #363333;
+	  }
+	  
+	  h3 span {
+		  display: block;
+		  color: #f1ebe5;
+		  font-size: 30px;
+		  text-shadow: 2px 3px 0px black;
+	  }
 /*------Blog------------------------------------------------*/
 
 .blog-filters span {
