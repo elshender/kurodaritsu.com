@@ -437,7 +437,7 @@ function initKuroda() {
             counter: false
         });
     }
-    lightGalleryInit();
+    lightGalleryInit();    
     //   appear------------------
     $(".stats").appear(function () {
         $(".num").countTo();
@@ -598,7 +598,7 @@ function initKuroda() {
     videoint();
     // Share   ------------------
     $(".share-container").share({
-        networks: ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin']
+        networks: ['facebook', 'twitter', ]
     });
     var shrcn = $(".share-wrapper"),
         ssb = $(".showshare");
