@@ -5923,39 +5923,39 @@ section.parallax-section .section-title:before {
   }
   
   /*********************
-	SCAN LINES
-  *********************/
-  .scan,
-  .scanInnerA,
-  .scanInnerB{
-	position: absolute;
-	left: 0;
-	width: 20em;
-	height: 10%;
-	background-color: hsla(0, 0%, 0%, .13);
-	box-shadow: 0 0 10px hsla(0, 0%, 0%, .25);
-	animation: scan 8s linear infinite;
-  }
-  
-  .scanInnerA,
-  .scanInnerB{
-	content: '';
-	display: block;
-	height: relative;
-  }
-  
-  .scanInnerA {
-	top: -5%;
-  }
-  
-  .scanInnerB {
-	top: -0%;
-  }
-  
-  @keyframes scan {
-	  0% { top: 0%; }
-	100% { top: 90%; }
-  }
+  SCAN LINES
+*********************/
+.scan,
+.scanInnerA,
+.scanInnerB {
+  position: absolute;
+  left: 0;
+  width: 20em;
+  height: 10%;
+  background-color: hsla(0, 0%, 0%, .13);
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, .25);
+  animation: scan 8s linear infinite;
+}
+
+.scanInnerA,
+.scanInnerB {
+  display: block;
+  height: relative;
+}
+
+.scanInnerA {
+  top: -5%;
+}
+
+.scanInnerB {
+  top: -0%;
+}
+
+@keyframes scan {
+   from { transform: translateY(0); }
+  to { transform: translateY(855%); }
+}
+
   /* ------Team Cards 2 ------------------------------------------------------------ */
 .container_card2 {
 	padding-bottom: 30px;
