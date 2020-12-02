@@ -6360,6 +6360,13 @@ h3 span {
 	background-size: 32em;
 	background-image: url(https://i.imgur.com/0zbG41V.png);
   }
+  #myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+  }
   .item52 {
 	background-size: 30em;
 	background-image:
