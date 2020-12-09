@@ -20,6 +20,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Poppins:400,500,600,700,800,900|Titillium+Web:400,600,700&subset=cyrillic,cyrillic-ext,devanagari,latin-ext,vietnamese');
 
+
 /*-------------General Style---------------------------------------*/
 *,
 :before,
@@ -92,6 +93,7 @@ body {
 @viewport {
 	width: device-width;
 }
+
 /* ---------Page preload--------------------------------------*/
 
 .loader-wrap {
@@ -769,7 +771,7 @@ nav.nav-inner {
 }
 .footer-inner {
 	z-index: 3;
-	padding: 10px 0 10px;
+	padding: 150px 0 10px;
 }
 .partcile-dec {
 	position: absolute;
@@ -970,16 +972,15 @@ p.interact,
 	color: #fff;
 }
 #twitts-container p.tweet {
-	font-size: 10px;
-	overflow: scroll;
-	color: rgba(255, 255, 255, 0.64);
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.71);
 	float: left;
-	padding: 1px 1px;
+	padding: 10px 18px;
 	background: rgba(255, 255, 255, 0.031);
 	border-radius: 4px;
 	overflow: hidden;
-	font-weight: 200;
-	margin-bottom: 1px;
+	font-weight: 400;
+	margin-bottom: 10px;
 	box-shadow: 0px 0px 28px 1px rgba(51, 51, 51, 0.41);
 }
 #twitts-container ul li:hover p.tweet{
@@ -1143,6 +1144,7 @@ p.interact,
 .mar-bottom {
 	margin-bottom: 50px;
 }
+
 /*--------------hero--------------------------------------*/
 .impulse-wrap {
 	position: absolute;
@@ -5631,6 +5633,19 @@ section.parallax-section .section-title:before {
 .no-padding {
 	padding: 0;
 }
+/* ------ YoutubeBG ------------------------------------------------------------ */
+.tv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+  
+	width: 100%;
+	height: 100%;
+  
+	overflow: hidden;
+		}
+
 /* ------Team Cards 1 ------------------------------------------------------------ */
 .container_card {
 	padding-bottom: 30px;

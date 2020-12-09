@@ -503,6 +503,8 @@ function initKuroda() {
         };
         twitterFetcher.fetch(config1);
     }
+    // Cookies ------------------
+
     //   Contact form------------------
     $("#contactform").submit(function () {
         var a = $(this).attr("action");

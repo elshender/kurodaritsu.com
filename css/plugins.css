@@ -4770,10 +4770,10 @@
 }
 video,
 source {
-  bottom: 0;
-  left: 0;
+  bottom: -20px;
+  left: -70px;
   min-height: 100%;
-  min-width: 100%;
+  min-width: 150%;
   position: absolute;
 }
 .loaded .ytplayer-container {
