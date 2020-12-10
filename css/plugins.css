@@ -5701,7 +5701,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	display:none; }
     .ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
       position: absolute;
-      /* please don't change 'position' */
+      /*  don't change 'position' */
       background-color: none;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -5713,7 +5713,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .ps-container > .ps-scrollbar-y-rail {
     display: block;
     position: absolute;
-    /* please don't change 'position' */
+    /* don't change 'position' */
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -5731,7 +5731,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
       position: absolute;
 	    left:0;
-      /* please don't change 'position' */
+      /*  don't change 'position' */
       background-color: #aaa;
       -webkit-border-radius: 2px;
       -moz-border-radius: 4px;
