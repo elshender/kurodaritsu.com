@@ -22,10 +22,10 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
   
-    if (event.data === YT.PlayerState.ENDED && currentVid !== vidArray.length -1 && !done){
+    if (event.data === YT.PlayerState.ENDED && currentVid !== vidArray.length -1 ){
       currentVid++;
       loadVid();
-    } else if (event.data === YT.PlayerState.ENDED && currentVid     === vidArray.length -1 && !done){
+    } else if (event.data === YT.PlayerState.ENDED && currentVid     === vidArray.length -1 ){
       console.log("change")
       currentVid = 0;
       loadVid();
