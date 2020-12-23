@@ -1,6 +1,6 @@
 var player;
 
-var vidArray = [{videoId: '2b5QNj-BVhs'}, {videoId: '9ge5PzHSS0Y'}, {videoId: 'OWsCt7B-KWs'}];
+var vidArray = [{videoId: 'PwGE05qpiAU'}, {videoId: 'VE9IU9WouRE'}, {videoId: '8Y80CXXiFds'}];
 var playerSettings = {autoplay: 1, autohide: 1, modestbranding: 1, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3, mute: 1};
 
 var randomVid = Math.floor(Math.random() * vidArray.length);
