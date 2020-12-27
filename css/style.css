@@ -21,7 +21,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Poppins:400,500,600,700,800,900|Titillium+Web:400,600,700&subset=cyrillic,cyrillic-ext,devanagari,latin-ext,vietnamese');
 
 
-/*-------------General Style---------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
 *,
 :before,
 :after {
@@ -1136,11 +1141,17 @@ p.interact,
 	padding-left: 60px;
 }
 .mar-top {
-	margin-top: 50px;
+	margin-top: 200px;
+	margin-left: 375px;
+}
+@media only screen and (max-width: 564px){
+	.mar-top {
+		margin-left: 152px;
+	}
 }
 .mar-top-sm {
 	margin-top: 20px;
-}
+	}
 .mar-bottom {
 	margin-bottom: 50px;
 }
@@ -1362,12 +1373,74 @@ p.interact,
 .hero-inner {
 	overflow: hidden;
 }
+/*--------------hero-svg--------------------------------------*/
+.hero-svg-logo {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+}
+	.hero-svg-icon {
+	  width: 200%;
+	  max-width: 700px;
+	  top: 9%;
+	  align-items: center;
+	  z-index: -10;
+	}
+	@media only screen and (max-width: 564px){
+		.hero-svg-icon {
+			max-width: 500px;
+		}
+	}
+
+	  path {
+		color: #f3f3f398;
+		stroke-width: 5px;
+		stroke-dashoffset: -3000;
+		stroke-dasharray: 3000;
+	  }
+		
+	.hero-svg-is-active {
+		  animation-name: icon;
+		  animation-duration: 4s;
+		  animation-iteration-count: 1;
+		  animation-fill-mode: forwards;
+		}
+
+  @keyframes icon {
+	50% {
+	  stroke-dashoffset: 0;
+	  fill: transparent;
+	}
+	75% {
+	  fill: transparent;
+	  stroke-width: 5px;
+	}
+	100% {
+	  stroke-dashoffset: 0;
+	  fill: #f3f3f32f;
+	  stroke-width: 0px;
+	}
+  }
+  
+
+
+
 .half-hero-wrap {
 	position: absolute;
 	left: 25%;
 	z-index: 10;
-	top: 29%;
+	top: 15%;
 }
+@media only screen and (max-width: 564px){
+	.half-hero-wrap {
+		top: 30%;
+	}
+}
+
 .half-hero-wrap h1:before {
 	content: '';
 	position: absolute;
@@ -1389,7 +1462,7 @@ p.interact,
 }
 .half-hero-wrap h4 {
 	padding: 15px 30px;
-	background: rgba(0, 0, 0, 0.21);
+	background: rgba(0, 0, 0, 0.49);
 	text-align: left;
 	font-size: 11px;
 	float: left;
@@ -7598,7 +7671,7 @@ h3 span {
 	}
 	.half-hero-wrap {
 		left: 0;
-		padding: 0 100px;
+		padding: 0 10px;
 		top:20%;
 	}
 	.half-hero-wrap h1 {
@@ -7869,7 +7942,7 @@ h3 span {
 }
 @media only screen and (max-width: 564px) {
 	.half-hero-wrap {
-		top: 25%;
+		top: 30%;
 	}
 	.half-hero-wrap h1 {
 		font-size: 26px;
@@ -7894,7 +7967,7 @@ h3 span {
 	}
 	.half-hero-wrap {
 		left: 0;
-		padding: 0 100px 0 20px;
+		padding: 0 0px 0 0px;
 	}
 	.gallery-item {
 		width: 100% !important;

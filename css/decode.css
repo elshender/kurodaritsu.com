@@ -1,0 +1,67 @@
+  /*--------------hero-decode-kuroda--------------------------------------*/
+.decode-text{
+    width: 100%;
+    font-size: 70px;
+    text-align: center;
+  }
+  .space{
+      display:inline-block;
+      width:10px;
+  }
+  .text-animation{
+      display:inline-block;
+    position:relative;
+      color: transparent;
+      text-transform:uppercase;
+  }
+  .text-animation:before{
+          content: '';
+          color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: #f3f3f375;
+          width: 0;
+          height: 1.2em;
+          -webkit-transform: translate(-50%,-55%);
+          -ms-transform: translate(-50%,-55%);
+          transform: translate(-50%,-55%);
+      }
+  
+      .text-animation.state-1{}
+        .text-animation.state-1:before{
+                width:1px;
+          }
+     
+          .text-animation.state-2{}
+            .text-animation.state-2:before{
+                width:.9em;
+          }
+          .text-animation.state-3{
+          color: white;
+          }
+          .text-animation.state-3:before{
+                width:0;
+          }
+
+          @media only screen and (max-width: 564px){
+            .decode-text {
+                font-size: 70px;
+            }
+        }
+
+        @media only screen and (max-width: 1064px){
+            .decode-text {
+                font-size: 60px;
+            }
+        }
+
+  @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+  div{
+    font-family: 'Share Tech Mono', monospace;
+  }
+  body{
+    height: 100vh;
+    align-items: center;
+    display: flex;
+  }
