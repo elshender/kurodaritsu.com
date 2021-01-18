@@ -1374,8 +1374,9 @@ p.interact,
 	overflow: hidden;
 }
 /*--------------Event-tempstyle--------------------------------------*/
-.icon{
+#eventTable .icon  {
 	border-radius: 50%;
+	width: 40px;
 }
 
 /*--------------Event-cal--------------------------------------*/
