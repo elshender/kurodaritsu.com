@@ -1378,6 +1378,9 @@ p.interact,
 	border-radius: 50%;
 	width: 40px;
 }
+#eventTable .image  {
+	width: 150px;
+}
 
 /*--------------Event-cal--------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
