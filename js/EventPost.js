@@ -31,7 +31,7 @@ function eventPostInit(results){
 
 
 function postEvents(eventData){
-  var htmlList = ["h3", "img", "h4", "p", "img"]
+  var htmlList = ["h1", "img", "h4", "p", "img"]
   var eventArea = document.getElementById("eventTable");
   for(x in eventData){
     var eventEntry = document.createElement("div");
