@@ -1395,7 +1395,7 @@ figure.snip1208 {
   color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin-top: 10px;
   min-width: 220px;
   max-width: 310px;
   width: 100%;
@@ -1403,6 +1403,7 @@ figure.snip1208 {
   color: #000000;
   text-align: left;
   font-size: 16px;
+  display: inline-block;
 }
 figure.snip1208 * {
   -webkit-box-sizing: border-box;
@@ -1419,7 +1420,7 @@ figure.snip1208 img {
   transition: all 0.4s ease;
 }
 figure.snip1208 figcaption {
-  padding: 25px;
+  padding-top: 15px;
   position: relative;
 }
 figure.snip1208 .date,

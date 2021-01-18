@@ -31,23 +31,26 @@ function eventPostInit(results){
 
 
 function postEvents(eventData){
-  var htmlList = ["h1", "img", "h4", "p", "img", "a"]
+  var htmlList = ["h1", "img", "h4", "p", "img", "href"]
   var eventArea = document.getElementById("eventTable");
   for(x in eventData){
-    var eventEntry = document.createElement("div");
+    var eventEntry = document.createElement("a");
     eventEntry.classList.add("eventEntry");
       var i = 0;
     for(y in eventData[x]){
         var eventField = document.createElement(htmlList[i]);
         eventField.classList.add(y);
-     if(htmlList[i] == "img"){
-          eventField.src = eventData[x][y];
-      } else if (htmlList[i] == "a"){
-        eventField.href = eventData[x][y];
-      }
+        if(htmlList[i] == "img"){
+            eventField.src = eventData[x][y];
+        } else if (htmlList[i] == "href"){
+          eventEntry.href = eventData[x][y];
+          i += 1
+          continue;
+        }
         else {
-         eventField.innerHTML = eventData[x][y]; 
-      }
+           eventField.innerHTML = eventData[x][y]; 
+        }
+        console.log(eventField);
       eventEntry.appendChild(eventField);
         i += 1
     }
