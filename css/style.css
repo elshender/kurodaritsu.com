@@ -1404,6 +1404,7 @@ figure.snip1208 {
   text-align: left;
   font-size: 16px;
   display: inline-block;
+  padding: 10px;
 }
 figure.snip1208 * {
   -webkit-box-sizing: border-box;
@@ -1425,9 +1426,9 @@ figure.snip1208 figcaption {
 }
 figure.snip1208 .date,
 figure.snip1208 i {
-  background-color: #1abc9c;
+  background-color: #2d2d32;
   top: 25px;
-  color: #fff;
+  color: #f3ca03;
   left: 25px;
   min-height: 60px;
   min-width: 60px;
@@ -1477,9 +1478,9 @@ figure.snip1208 p {
 figure.snip1208 button {
   border: medium none;
   padding: 10px 20px;
-  background-color: #1abc9c;
+  background-color: #2d2d32;
   font-weight: 800;
-  color: #ffffff;
+  color:  #f3ca03;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -1513,7 +1514,7 @@ figure.snip1208.hover i {
 }
 figure.snip1208:hover button,
 figure.snip1208.hover button {
-  background-color: #117964;
+  background-color: #696972;
 }
 
 /*--------------hero-svg--------------------------------------*/

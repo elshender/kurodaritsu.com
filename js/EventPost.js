@@ -30,30 +30,34 @@ function eventPostInit(results){
 }
 
 
-function postEvents(eventData){
-  var htmlList = ["h1", "img", "h4", "p", "img", "href"]
+function postEvents(eventData) {
+  var htmlList = ["h1", "img", "h4", "p", "img", "button"]
   var eventArea = document.getElementById("eventTable");
-  for(x in eventData){
-    var eventEntry = document.createElement("a");
+  for (x in eventData) {
+    var eventEntry = document.createElement("figure");
+    var eventInfo = document.createElement("figcaption");
+    eventEntry.appendChild(eventInfo);
     eventEntry.classList.add("eventEntry");
-      var i = 0;
-    for(y in eventData[x]){
-        var eventField = document.createElement(htmlList[i]);
-        eventField.classList.add(y);
-        if(htmlList[i] == "img"){
-            eventField.src = eventData[x][y];
-        } else if (htmlList[i] == "href"){
-          eventEntry.href = eventData[x][y];
-          eventEntry.target = "_blank";
-          i += 1
-          continue;
+    var i = 0;
+    for (y in eventData[x]) {
+      var eventField = document.createElement(htmlList[i]);
+      eventField.classList.add(y);
+      if (htmlList[i] == "img") {
+        eventField.src = eventData[x][y];
+        eventEntry.insertBefore(eventField, eventInfo);
+        i += 1;
+        continue;
+      } else if (htmlList[i] == "button") {
+        eventField.onclick = function () {
+          window.open(eventData[x][y], "_blank");
         }
-        else {
-           eventField.innerHTML = eventData[x][y]; 
-        }
-        console.log(eventField);
-      eventEntry.appendChild(eventField);
-        i += 1
+        eventField.innerHTML = "READ MORE"
+      }
+      else {
+        eventField.innerHTML = eventData[x][y];
+      }
+      eventInfo.appendChild(eventField);
+      i += 1
     }
     eventArea.insertBefore(eventEntry, eventArea.childNodes[2]);
   }
