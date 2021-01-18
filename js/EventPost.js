@@ -44,6 +44,7 @@ function postEvents(eventData){
             eventField.src = eventData[x][y];
         } else if (htmlList[i] == "href"){
           eventEntry.href = eventData[x][y];
+          eventEntry.target = "_blank";
           i += 1
           continue;
         }
