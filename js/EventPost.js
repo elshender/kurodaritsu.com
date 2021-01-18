@@ -31,14 +31,15 @@ function eventPostInit(results){
 
 
 function postEvents(eventData){
-    var htmlList = ["h3", "h4", "p", "img"]
+  var htmlList = ["h3", "img", "h4", "p", "img"]
   var eventArea = document.getElementById("eventTable");
   for(x in eventData){
     var eventEntry = document.createElement("div");
       var i = 0;
     for(y in eventData[x]){
         var eventField = document.createElement(htmlList[i]);
-        if(i == 3){
+        eventField.classList.add(y);
+        if(htmlList[i] == "img"){
             eventField.src = eventData[x][y];
         } else {
            eventField.innerHTML = eventData[x][y]; 
