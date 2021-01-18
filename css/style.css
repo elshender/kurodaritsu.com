@@ -1374,18 +1374,11 @@ p.interact,
 	overflow: hidden;
 }
 /*--------------Event-tempstyle--------------------------------------*/
-#eventTable .icon  {
+#eventTable img .icon  {
 	border-radius: 50%;
 	width: 40px;
-}
-#eventTable .image  {
-	width: 150px;
-}
-#eventTable .eventname {
-	display: inline-block;
-    padding-left: 10px;
-}
-
+  }
+  
 
 /*--------------Event-cal--------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
