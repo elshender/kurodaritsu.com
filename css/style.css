@@ -1378,7 +1378,7 @@ p.interact,
 	border-radius: 50%;
 	width: 40px;
   }
-  
+
 
 /*--------------Event-cal--------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
@@ -1404,6 +1404,10 @@ figure.snip1208 * {
   box-sizing: border-box;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+figure.snip1208 .date img {
+    border-radius: 50%;
+    width: 60px;
 }
 figure.snip1208 img {
   max-width: 100%;
@@ -1434,6 +1438,7 @@ figure.snip1208 .date {
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
+  border-radius: 50%;
 }
 figure.snip1208 .date span {
   display: block;
@@ -1450,6 +1455,7 @@ figure.snip1208 i {
   transform: rotateY(-90deg);
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  border-radius: 50%;
 }
 figure.snip1208 h3,
 figure.snip1208 p {
