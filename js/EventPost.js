@@ -31,7 +31,7 @@ function eventPostInit(results){
 
 
 function postEvents(eventData){
-  var htmlList = ["h1", "img", "h4", "p", "img"]
+  var htmlList = ["h1", "img", "h4", "p", "img", "a"]
   var eventArea = document.getElementById("eventTable");
   for(x in eventData){
     var eventEntry = document.createElement("div");
@@ -40,11 +40,14 @@ function postEvents(eventData){
     for(y in eventData[x]){
         var eventField = document.createElement(htmlList[i]);
         eventField.classList.add(y);
-        if(htmlList[i] == "img"){
-            eventField.src = eventData[x][y];
-        } else {
-           eventField.innerHTML = eventData[x][y]; 
-        }
+     if(htmlList[i] == "img"){
+          eventField.src = eventData[x][y];
+      } else if (htmlList[i] == "a"){
+        eventField.href = eventData[x][y];
+      }
+        else {
+         eventField.innerHTML = eventData[x][y]; 
+      }
       eventEntry.appendChild(eventField);
         i += 1
     }

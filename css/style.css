@@ -1381,6 +1381,11 @@ p.interact,
 #eventTable .image  {
 	width: 150px;
 }
+#eventTable .eventname {
+	display: inline-block;
+    padding-left: 10px;
+}
+
 
 /*--------------Event-cal--------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
