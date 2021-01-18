@@ -35,6 +35,7 @@ function postEvents(eventData){
   var eventArea = document.getElementById("eventTable");
   for(x in eventData){
     var eventEntry = document.createElement("div");
+    eventEntry.classList.add("eventEntry");
       var i = 0;
     for(y in eventData[x]){
         var eventField = document.createElement(htmlList[i]);
