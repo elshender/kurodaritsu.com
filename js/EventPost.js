@@ -1,7 +1,7 @@
 
 var eventsData;
 var eventsConfig = {
-    sheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZp9K8m_iK_oEyKK6EdjzusPmieoXCrCwG5wzWnj1IUjWLcEO7kpiaaC_3GArnQjM8EDzx9USXl_bg/pub?output=csv",
+    sheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7S-83ylp-gnwHDMtLUnYfA5RkHPtrxX8If67wYvblpMAkleLw1SCGUILPyQ1L8ymvWAZvYotQLrJn/pub?output=csv",
     pageFilter: {}
 }
 
