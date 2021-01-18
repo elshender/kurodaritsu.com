@@ -1374,12 +1374,9 @@ p.interact,
 	overflow: hidden;
 }
 /*--------------Event-tempstyle--------------------------------------*/
-.eventTable{
-
-}
-.eventTable.icon{
+.icon{
 	border-radius: 50%;
-}	
+}
 
 /*--------------Event-cal--------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
