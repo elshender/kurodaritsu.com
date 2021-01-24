@@ -38,6 +38,18 @@
                 columnName: "name"
             },
 
+            e: {
+                type: "p",
+                class: "null",
+                columnName: "eventinfo"
+            },
+
+            f: {
+                type: "button",
+                class: "null",
+                columnName: ""
+            },
+
 
         }
 
