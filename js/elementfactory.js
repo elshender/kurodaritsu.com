@@ -9,16 +9,24 @@
             filter: "",
 
             backgroundImg: {
-                class: "eventTable",
-                defaultImg: "https://s3-us-west-2.amazonaws.com/www.guilded.gg/UserAvatar/2d3cbe63a784c7dbab026d338880437b-Large.png?w=450&h=450age",
-                columnName: "image"
+                class: ["snipbg", "date"],
+                defaultImg: ["https://cdn.eso.org/images/screen/eso1907a.jpg"],
+                columnName: ["image", "icon"]
             },
 
             a: {
-                type: "figure",
-                class: "snip1208",
-                columnName: "icon"
+                type: "div",
+                class: "snipbg",
+                columnName: ""
             },
+
+            b: {
+                type: "div",
+                class: "date",
+                columnName: ""
+            },
+
+
         }
 
     }
@@ -139,12 +147,15 @@
 
     function addBackgroundImg(imgConfig, content) {
         if (imgConfig.class) {
-            let elemArr = document.getElementsByClassName(imgConfig.class);
-            for (i = 0; i < elemArr.length; i++) {
-                if (content[i][imgConfig.columnName]) {
-                    elemArr[i].style.backgroundImage = "url('" + content[i][imgConfig.columnName] + "')";
-                } else {
-                    elemArr[i].style.backgroundImage = "url('" + imgConfig.defaultImg + "')";
+            for (i = 0; i < imgConfig.class.length; i++) {
+                let elemArr = document.getElementsByClassName(imgConfig.class[i]);
+                for (j = 0; j < elemArr.length; j++) {
+                    if (content[i][imgConfig.columnName[i]]) {
+                        console.log(content[i])
+                        elemArr[j].style.backgroundImage = "url('" + content[j][imgConfig.columnName[i]] + "')";
+                    } else {
+                        elemArr[j].style.backgroundImage = "url('" + imgConfig.defaultImg[i] + "')";
+                    }
                 }
             }
         }
