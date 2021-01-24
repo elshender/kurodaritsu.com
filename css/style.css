@@ -1425,13 +1425,14 @@ figure.snip1208 .snipbg {
     background-size:cover;
 }
 
-figure.snip1208 .date img {
+figure.snip1208 .date {
     border-radius: 50%;
 	width: 60px;
 	max-height: 60px;
 	min-height: 60px;
 	border: 3px #dccb01 solid;
-    box-shadow: 0 4px 6px 0.1px rgb(0 0 0 / 60%);
+	box-shadow: 0 4px 6px 0.1px rgb(0 0 0 / 60%);
+	background-size:cover;
 }
 figure.snip1208 img {
   max-width: 100%;
