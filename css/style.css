@@ -1519,7 +1519,9 @@ figure.snip1208 button {
   font-size: 0.8em;
   display: block;
   margin: 0 auto;
+  content:  "View Event";
 }
+
 figure.snip1208 a {
   left: 0;
   right: 0;
