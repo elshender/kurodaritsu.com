@@ -1397,6 +1397,8 @@ figure.snip1208 {
   margin-top: 10px;
   min-width: 290px;
   max-width: 290px;
+  min-height: 470px;
+  max-height: 470px;
   width: 100%;
   background-color: #3e3b0610;
   color: #000000;
@@ -1519,6 +1521,9 @@ figure.snip1208 button {
   font-size: 0.8em;
   display: block;
   margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   
 }
 
