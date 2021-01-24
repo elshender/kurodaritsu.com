@@ -19,30 +19,6 @@
                 class: "test",
                 columnName: "icon"
             },
-
-            b: {
-                type: "div",
-                class: "bla",
-                columnName: "eventinfo"
-            },
-
-            c: {
-                type: "div",
-                class: "something",
-                columnName: ""
-            },
-
-            d: {
-                type: "p",
-                class: "wekm",
-                columnName: "eventname"
-            },
-
-            e: {
-                type: "div",
-                class:"blabla",
-                columnName: "icon"
-            }
         }
 
     }
