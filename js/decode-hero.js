@@ -75,4 +75,3 @@ function shuffle(array) {
 }
 decodeText();
 setInterval(function(){ decodeText(); }, 10000);
-
