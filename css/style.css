@@ -1397,8 +1397,8 @@ figure.snip1208 {
   margin-top: 10px;
   min-width: 290px;
   max-width: 290px;
-  min-height: 470px;
-  max-height: 470px;
+  min-height: 400px;
+  max-height: 400px;
   width: 100%;
   background-color: #3e3b0610;
   color: #000000;
@@ -1508,6 +1508,11 @@ figure.snip1208 p {
   text-align: justify;
   font-family:monospace;
   line-height:1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
   
 }
 figure.snip1208 button {
