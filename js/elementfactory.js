@@ -135,7 +135,7 @@
     function addToPage(elements) {
         for (i = 0; i < elements.length; i++) {
             let innerContainer = document.createElement("figure")
-            innerContainer.className = "calendarItem"
+            innerContainer.className = "snip1208"
             for (j = 0; j < elements[i].length; j++) {
                 innerContainer.appendChild(elements[i][j]);
             }
