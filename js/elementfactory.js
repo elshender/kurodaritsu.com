@@ -47,7 +47,7 @@
             f: {
                 type: "button",
                 class: "null",
-                columnName: ""
+                columnName: "eventURL"
             },
 
 
