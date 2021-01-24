@@ -26,6 +26,18 @@
                 columnName: ""
             },
 
+            c: {
+                type: "i",
+                class: "fab fa-guilded",
+                columnName: ""
+            },
+
+            d: {
+                type: "h3",
+                class: "null",
+                columnName: "name"
+            },
+
 
         }
 
