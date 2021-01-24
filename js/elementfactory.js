@@ -15,8 +15,8 @@
             },
 
             a: {
-                type: "img",
-                class: "test",
+                type: "figure",
+                class: "snip1208",
                 columnName: "icon"
             },
         }
