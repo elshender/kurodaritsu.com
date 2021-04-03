@@ -4,60 +4,64 @@
 
     // configuration for element creation
 
-    let elementConfig = {
+    let pageConfig = {
         page1: {
             filter: "",
 
             backgroundImg: {
                 class: ["snipbg", "date"],
-                defaultImg: ["https://cdn.eso.org/images/screen/eso1907a.jpg"],
+                defaultImg: ["https://static2.cbrimages.com/wordpress/wp-content/uploads/2020/06/Star-citizen-guns-2x1-feature.jpg"],
                 columnName: ["image", "icon"]
             },
 
-            a: {
-                type: "div",
-                class: "snipbg",
-                columnName: ""
-            },
+            elementConfig: {
+                a: {
+                    type: "div",
+                    class: "snipbg",
+                    columnName: "",
+                    data: []
+                },
 
-            b: {
-                type: "div",
-                class: "date",
-                columnName: ""
-            },
+                b: {
+                    type: "div",
+                    class: "date",
+                    columnName: "",
+                    data: []
+                },
 
-            c: {
-                type: "i",
-                class: "fab fa-guilded",
-                columnName: ""
-            },
+                c: {
+                    type: "i",
+                    class: "fab fa-guilded",
+                    columnName: "",
+                    data: []
+                },
 
-            d: {
-                type: "h3",
-                class: "null",
-                columnName: "name"
-            },
+                d: {
+                    type: "h3",
+                    class: "null",
+                    columnName: "name",
+                    data: []
+                },
 
-            e: {
-                type: "p",
-                class: "null",
-                columnName: "eventinfo"
-            },
+                e: {
+                    type: "p",
+                    class: "eventText",
+                    columnName: "eventinfo",
+                    data: []
+                },
+    
+                f: {
+                    type: "button",
+                    class: "null",
+                    columnName: "eventURL",
+                    data: []
+                }
 
-            f: {
-                type: "button",
-                class: "null",
-                columnName: "eventURL"
-            },
-
-
+            }
         }
-
     }
 
-
     window.addEventListener('DOMContentLoaded', init);
-
 
     function init() {
         Papa.parse(sheet, {
@@ -70,14 +74,14 @@
     // Runs all functions ect
 
     function eventPostInit(results) {
-        const pageElements = selectPage(elementConfig);
+        const pageElements = selectPage(pageConfig);
         const data = results.data;
         const calendarContent = (() => { if (pageElements.filter) { return filterContent(pageElements, data, "name"); } else { return data } })();
-        const contentOrder = contentAddOrder(pageElements, "columnName");
-        const unfinishedElements = produceElements(pageElements, calendarContent);
-        const finishedElements = addContent(unfinishedElements, calendarContent, contentOrder);
+        assignData(pageElements.elementConfig, calendarContent);
+        const finishedElements = elementCreator(pageElements.elementConfig);
         addToPage(finishedElements);
         addBackgroundImg(pageElements.backgroundImg, calendarContent);
+        typeWriterText();  
     }
 
     // Select the config for specific page
@@ -95,31 +99,26 @@
         return content.filter(item => expression.test(item[colName]));
     }
 
-    // Creates order of content to be inserted into created elements
-    function contentAddOrder(pageConfig, selector) {
-        let orderArr = [];
-        for (x in pageConfig) {
-            if (pageConfig[x].hasOwnProperty('type')) {
-                orderArr.push(pageConfig[x][selector]);
+    function assignData(dataAreas, data) {
+        data.forEach(row => {
+            for (x in dataAreas) {
+                dataAreas[x].data.push(row[dataAreas[x].columnName])
             }
-        }
-        return orderArr;
+        });
     }
 
     // Create HTML elements
 
-    function produceElements(elements, entries) {
+    function elementCreator(elements) {
         let allElements = [];
-        const dataKeys = Object.keys(entries);
-        for (i = 0; i < dataKeys.length; i++) {
+
+        for (i = 0; i < elements.a.data.length; i++) {
             let elementSet = [];
             for (x in elements) {
-                let selectedEle = elements[x]
-                if (selectedEle.hasOwnProperty('type')) {
-                    let newElement = document.createElement(selectedEle.type);
-                    newElement.className = selectedEle.class;
-                    elementSet.push(newElement);
-                }
+                let newElement = document.createElement(elements[x].type);
+                newElement.className = elements[x].class;
+                addContentNew(newElement, elements[x].data[i], elements[x].type);
+                elementSet.push(newElement);
             }
             allElements.push(elementSet);
         }
@@ -128,30 +127,23 @@
 
     // Add content from spreadsheet to HTML elements
 
-    function addContent(elements, content, types) {
-        for (i = 0; i < elements.length; i++) {
-            for (j = 0; j < elements[0].length; j++) {
-                let ele = elements[i][j];
-                let item = content[i][types[j]];
-                if (item) {
-                    switch (ele.tagName) {
-                        case "IMG":
-                            ele.src = item;
-                            break;
-                        case "BUTTON":
-                            ele.onclick = function () {
-                                window.open(item, "_blank");
-                            }
-                            break;
-                        case "A":
-                            ele.href = item;
-                        default:
-                            ele.innerHTML = item;
+    function addContentNew(ele, content, type) {
+        if (content) {
+            switch (type) {
+                case "img":
+                    ele.src = content;
+                    break;
+                case "button":
+                    ele.onclick = function () {
+                        window.open(content, "_blank");
                     }
-                }
+                    break;
+                case "a":
+                    ele.href = content;
+                default:
+                    ele.innerHTML = content;
             }
         }
-        return elements;
     }
 
     //Add finished element to the web page
@@ -159,7 +151,7 @@
     function addToPage(elements) {
         for (i = 0; i < elements.length; i++) {
             let innerContainer = document.createElement("figure")
-            innerContainer.className = "snip1208"
+            innerContainer.className = "calendarItem"
             for (j = 0; j < elements[i].length; j++) {
                 innerContainer.appendChild(elements[i][j]);
             }
@@ -175,7 +167,6 @@
                 let elemArr = document.getElementsByClassName(imgConfig.class[i]);
                 for (j = 0; j < elemArr.length; j++) {
                     if (content[i][imgConfig.columnName[i]]) {
-                        console.log(content[i])
                         elemArr[j].style.backgroundImage = "url('" + content[j][imgConfig.columnName[i]] + "')";
                     } else {
                         elemArr[j].style.backgroundImage = "url('" + imgConfig.defaultImg[i] + "')";
