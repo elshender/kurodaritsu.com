@@ -1,6 +1,6 @@
 
 function getElements () {
-  return document.querySelectorAll('.bla');
+  return document.querySelectorAll('.eventText');
  }
  
  function type(element) {
