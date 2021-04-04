@@ -162,16 +162,16 @@
     //Add a background image to a selected element
 
     function addBackgroundImg(imgConfig, content) {
-        if (imgConfig.class) {
-            for (i = 0; i < imgConfig.class.length; i++) {
-                let elemArr = document.getElementsByClassName(imgConfig.class[i]);
-                for (j = 0; j < elemArr.length; j++) {
-                    if (content[i][imgConfig.columnName[i]]) {
-                        elemArr[j].style.backgroundImage = "url('" + content[j][imgConfig.columnName[i]] + "')";
-                    } else {
-                        elemArr[j].style.backgroundImage = "url('" + imgConfig.defaultImg[i] + "')";
-                    }
+        if (!imgConfig.class) { return;}
+        for (i = 0; i < imgConfig.class.length; i++) {
+            let elemArr = document.getElementsByClassName(imgConfig.class[i]);
+            for (j = 0; j < elemArr.length; j++) {
+                if (content[j][imgConfig.columnName[i]] == "") {
+                    elemArr[j].style.backgroundImage = "url('" + imgConfig.defaultImg[i] + "')";
+                } else {
+                    elemArr[j].style.backgroundImage = "url('" + content[j][imgConfig.columnName[i]] + "')";
                 }
+            
             }
         }
     }
