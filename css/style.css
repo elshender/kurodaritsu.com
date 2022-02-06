@@ -1580,6 +1580,28 @@ figure.snip1208.hover button {
   box-shadow: 0 0.1px 5px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
   text-shadow: 1px 1px 1px #555, -1px -1px 1px #000;
 }
+/*--------------Kurorace-Banner--------------------------------------*/
+.KuroRaceBan {
+	background:url('https://robertsspaceindustries.com/rsi/layouts/types/anvil-carrack/assets/images/rover-image.png'),linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
+    background-blend-mode: hard-light;
+    animation: hue-rotate 3s linear infinite;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
 
 /*--------------hero-svg--------------------------------------*/
 .hero-svg-logo {
