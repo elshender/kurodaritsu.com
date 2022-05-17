@@ -788,14 +788,14 @@ nav.nav-inner {
 }
 .subfooter {
 	background: #2D2D32;
-	height: 30px;
+	height: 100px;
 	z-index: 3;
 	padding: 0 90px;
 }
 .policy-box {
 	color: rgba(255, 255, 255, 0.71);
 	float: left;
-	padding-top: 36px;
+	padding-top: 25px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	font-weight: 500;
